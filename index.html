@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Pablo Para Jhi 💖</title>
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 90%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+button {
+    background: #fff;
+    color: #ff6f91;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff6f91;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.heart {
+    position: absolute;
+    animation: float 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-10vh) rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>💖 De Pablo Para Jhi 💖</h1>
+    <p id="frase">"Você é o pedacinho de céu que caiu para iluminar meus dias."</p>
+    <button onclick="nextSlide()">Ler mais</button>
+</div>
+
+<script>
+const frases = [
+    "Você ilumina meus dias mesmo estando longe.",
+    "Eu espero pelo dia em que vou poder realizar o abraço que tanto desejo te dar.",
+    "Mesmo à distância, você faz meu coração bater mais forte.",
+    "Quero segurar sua mão quando esse dia chegar.",
+    "Sonho com o dia em que vou te olhar nos olhos e dizer 'eu te amo'.",
+    "A distância é grande, mas nosso amor é maior.",
+    "Cada chamada sua me faz sentir que você está aqui.",
+    "Conto os dias para quando vou poder te ver pessoalmente.",
+    "Você é minha motivação diária para acreditar no amor.",
+    "Mesmo separados, sinto que estamos juntos pelo coração.",
+    "Quero te mandar flores só para te ver sorrindo do outro lado da tela.",
+    "Nosso amor vence a distância todos os dias.",
+    "Quando penso em desistir, lembro de você e sigo em frente.",
+    "Sinto falta do que ainda vamos viver.",
+    "Te amar me fortalece, mesmo nos dias difíceis.",
+    "A cada mensagem sua, sinto um pedacinho de você aqui.",
+    "Você é a pessoa que mais sinto perto, mesmo longe.",
+    "Espero pelo dia do nosso primeiro abraço.",
+    "Quero compartilhar cada detalhe da minha vida ao seu lado.",
+    "Mesmo sem te tocar, sei que meu coração pertence a você.",
+    "Você faz a distância parecer pequena perto do que sinto por você.",
+    "Nosso amor é maior que qualquer distância.",
+    "A saudade existe porque o amor é verdadeiro.",
+    "Espero pelo dia em que nossos olhos se cruzarão pela primeira vez.",
+    "Sonho com o nosso encontro todos os dias.",
+    "Enquanto você existir, serei grato pela vida.",
+    "Mesmo longe, você é meu lugar favorito.",
+    "Eu te amo em cada chamada, em cada mensagem, em cada pensamento.",
+    "Prometo que a distância será apenas detalhe na nossa história.",
+    "Te amar é fácil, esperar para te abraçar é o desafio.",
+    "Cada sorriso seu me lembra do quanto vale a pena esperar.",
+    "Mesmo sem te ver, sinto a sua presença em cada momento do meu dia.",
+    "Amar você me ensina a ter paciência.",
+    "Você é o motivo do meu sorriso todos os dias.",
+    "Mesmo sem contato físico, sinto que somos inseparáveis.",
+    "O nosso amor é forte, mesmo contra a distância.",
+    "Eu acredito em nós, acredito no nosso amor.",
+    "Você é o meu pensamento bom em todas as horas.",
+    "Quando ouço sua voz, meu coração se acalma.",
+    "A distância só me faz te querer ainda mais.",
+    "Você é o sonho que quero realizar ao acordar.",
+    "Você é minha paz mesmo nos dias turbulentos.",
+    "Mesmo à distância, sinto que estamos construindo algo lindo.",
+    "Amar você é uma das coisas mais bonitas que me aconteceu.",
+    "Você é a certeza que quero para o meu futuro.",
+    "Eu te amo com todas as letras, mesmo de longe."
+];
+
+let index = 0;
+function nextSlide() {
+    index = (index + 1) % frases.length;
+    document.getElementById('frase').innerText = frases[index];
+}
+
+// Criar corações suaves flutuantes
+for (let i = 0; i < 15; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+    heart.style.animationDuration = Math.random() * 10 + 10 + 's';
+    document.body.appendChild(heart);
+}
+</script>
+</body>
+</html>
